@@ -9,6 +9,8 @@ import net.minecraft.item.Item;
 
 public class TradeoffsItems {
 	
+	public static Item cEss;
+	
 	public static Item amuletFrame;
 	public static Item rAmuletFrame;
 	public static Item cAmuletFrame;
@@ -27,6 +29,8 @@ public class TradeoffsItems {
 
 	public static void initializeItems() {
 		
+		cEss = new TItem("cEss");
+		
 		amuletFrame = new TAmulet("amuletFrame", 0);
 		rAmuletFrame = new TAmulet("rAmuletFrame", 1);
 		cAmuletFrame = new TAmulet("cAmuletFrame", 2);
@@ -43,7 +47,7 @@ public class TradeoffsItems {
 		beltOfStability2 = new BeltOfStability("beltOfStability2", 1);
 		beltOfStability3 = new BeltOfStability("beltOfStability3", 2);
 		
-		Item[] TItems = {};
+		Item[] TItems = {cEss};
 		Item[] amulets = {amuletFrame, rAmuletFrame, cAmuletFrame};
 		Item[] rings = {ringFrame, rRingFrame, cRingFrame};
 		Item[] belts = {beltFrame, rBeltFrame, cBeltFrame, beltOfStability1, beltOfStability2, beltOfStability3};
