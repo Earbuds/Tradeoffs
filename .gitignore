@@ -1,0 +1,35 @@
+#############
+## Eclipse ##
+#############
+
+bin/
+build/
+tmp/
+.metadata/
+.settings/
+build/
+eclipse/
+.classpath
+.project
+
+##############
+## MC Forge ##
+##############
+
+gradle/
+build.gradle
+.gradle/
+gradlew
+gradlew.bat
+*.db
+CREDITS-fml.txt
+LICENSE-fml.txt
+MinecraftForge-Credits.txt
+MinecraftForge-License.txt
+README.txt
+forge-*-changelog.txt
+*changelog.txt
+logs/
+.settings/
+src/main/java/baubles
+src/main/resources/assets/baubles

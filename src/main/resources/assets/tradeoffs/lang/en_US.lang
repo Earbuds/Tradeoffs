@@ -1,0 +1,20 @@
+item.amuletFrame.name=Amulet Frame
+item.rAmuletFrame.name=Reinforced Amulet Frame
+item.cAmuletFrame.name=Contingent Amulet Frame
+
+item.ringFrame.name=Ring Frame
+item.rRingFrame.name=Reinforced Ring Frame
+item.cingFrame.name=Contingent Ring Frame
+
+item.beltFrame.name=Belt Frame
+item.rBeltFrame.name=Reinforced Belt Frame
+item.cBeltFrame.name=Contingent Belt Frame
+
+item.beltOfStability1.name=Belt of Stability v1
+item.beltOfStability2.name=Belt of Stability v2
+item.beltOfStability3.name=Belt of Stability v3
+
+itemGroup.tradeoffsGeneral=Tradeoffs - General
+itemGroup.tradeoffsAmulets=Tradeoffs - Amulets
+itemGroup.tradeoffsRings=Tradeoffs - Rings
+itemGroup.tradeoffsBelts=Tradeoffs - Belts
