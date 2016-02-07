@@ -1,4 +1,4 @@
-package tradeoffs.com;
+package tradeoffs.common;
 
 public class CommonProxy {
 

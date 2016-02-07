@@ -1,5 +1,6 @@
 package tradeoffs.blocks;
 
+import tradeoffs.utility.ModInfo;
 import tradeoffs.utility.TradeoffsTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -14,6 +15,7 @@ public class TBlock extends Block {
 		setBlockName(name);
 		setCreativeTab(TradeoffsTabs.tradeoffsGeneral);
 		setHarvestLevel(tool, harvestLvl);
+		setBlockTextureName(ModInfo.modid + ":" + name);
 	}
 
 }

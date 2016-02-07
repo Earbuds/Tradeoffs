@@ -1,6 +1,6 @@
 package tradeoffs.client;
 
-import tradeoffs.com.CommonProxy;
+import tradeoffs.common.CommonProxy;
 
 public class ClientProxy extends CommonProxy {
 

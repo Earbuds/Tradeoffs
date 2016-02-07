@@ -1,6 +1,10 @@
-block.cEssOre.name=Contingent Essence Ore
+tile.cEssOre.name=Contingent Essence Ore
+
+tile.cEssBlock.name=Contingent Essence Block
 
 item.cEss.name=Contingent Essence
+item.cEssCoarse.name=Coarse Contingent Essence
+item.cEssRefined.name=Refined Contingent Essence
 
 item.amuletFrame.name=Amulet Frame
 item.rAmuletFrame.name=Reinforced Amulet Frame

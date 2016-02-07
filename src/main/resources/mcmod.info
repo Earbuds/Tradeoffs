@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "Tradeoffs",
+  "name": "Tradeoffs",
+  "description": "Baubles trinkets with tradeoffs.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Skymmer"],
+  "credits": "Extra thanks to Kreming for helping me with many small bugs throughout the project",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

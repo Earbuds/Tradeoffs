@@ -1,5 +1,6 @@
 package tradeoffs.items.baubles;
 
+import tradeoffs.utility.ModInfo;
 import baubles.api.BaubleType;
 import baubles.api.IBauble;
 import net.minecraft.entity.EntityLivingBase;
@@ -17,6 +18,7 @@ public class ItemBauble extends Item implements IBauble {
 		super();
 		setMaxStackSize(1);
 		setUnlocalizedName(name);
+		setTextureName(ModInfo.modid + ":" + name);
 		
 		this.baubleLevel = baubleLevel;
 	}

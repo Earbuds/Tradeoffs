@@ -1,5 +1,6 @@
 package tradeoffs.items;
 
+import tradeoffs.utility.ModInfo;
 import tradeoffs.utility.TradeoffsTabs;
 import net.minecraft.item.Item;
 
@@ -9,6 +10,7 @@ public class TItem extends Item {
 		setMaxStackSize(64);
 		setUnlocalizedName(name);
 		setCreativeTab(TradeoffsTabs.tradeoffsGeneral);
+		setTextureName(ModInfo.modid + ":" + name);
 	}
 
 }

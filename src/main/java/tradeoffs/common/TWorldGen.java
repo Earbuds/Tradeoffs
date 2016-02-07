@@ -28,19 +28,12 @@ public class TWorldGen implements IWorldGenerator {
 	private void generateEnd(World world, Random random, int x, int z) {}
 	 
 	private void generateOverworld(World world, Random random, int x, int z) {
-		this.addOreSpawn(TradeoffsBlocks.cEssOre, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 15, 50);
+		this.addOreSpawn(TradeoffsBlocks.cEssOre, world, random, x, z, 16, 16, 6, 5, 8, 48);
 	}
 	 
 	private void generateNether(World world, Random random, int x, int z) {}
 
-	public void addOreSpawn(Block block, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY)
-	{
-		assert maxY > minY : "The maximum Y must be greater than the Minimum Y";
-		assert maxX > 0 && maxX <= 16 : "addOreSpawn: The Maximum X must be greater than 0 and less than 16";
-		assert minY > 0 : "addOreSpawn: The Minimum Y must be greater than 0";
-		assert maxY < 256 && maxY > 0 : "addOreSpawn: The Maximum Y must be less than 256 but greater than 0";
-		assert maxZ > 0 && maxZ <= 16 : "addOreSpawn: The Maximum Z must be greater than 0 and less than 16";
-	 
+	public void addOreSpawn(Block block, World world, Random random, int blockXPos, int blockZPos, int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY) {
 		int diffBtwnMinMaxY = maxY - minY;
 		
 		for (int x = 0; x < chancesToSpawn; x++) {

@@ -8,11 +8,15 @@ public class TradeoffsBlocks {
 
 	public static Block cEssOre;
 	
+	public static Block cEssBlock;
+	
 	public static void initializeBlocks() {
 		
-		cEssOre = new TOre(Material.ground, 0.5F, Block.soundTypeStone, "cEssOre", "pickaxe", 2);
+		cEssOre = new ContingentEssOre(Material.ground, 2.5F, Block.soundTypeStone, "cEssOre", "pickaxe", 2);
 		
-		Block[] TBlocks = {cEssOre};
+		cEssBlock = new TBlock(Material.ground, 2.5F, Block.soundTypeStone, "cEssBlock", "pickaxe", 2);
+		
+		Block[] TBlocks = {cEssOre, cEssBlock};
 		
 		for(int i = 0; i < TBlocks.length; i++) {
 			References.register(TBlocks[i]);
