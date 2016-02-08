@@ -37,28 +37,32 @@ public class CraftingRecipes {
 		ItemStack stepBelt = new ItemStack(TradeoffsItems.beltOfStability1);
 		
 		ItemStack cEssBlock = new ItemStack(TradeoffsBlocks.cEssBlock);
+		ItemStack cEssBlockRefined = new ItemStack(TradeoffsBlocks.cEssBlockRefined);
 		
 		// Shaped
 		GameRegistry.addRecipe(amuletFrame, "b b", "aaa", " a ", 'a', ironBar, 'b', string);
-		GameRegistry.addRecipe(rAmuletFrame, "bbb", "bab", " b ", 'a', amuletFrame, 'b', obsidian);
+		GameRegistry.addRecipe(rAmuletFrame, "bcb", "bab", " c ", 'a', amuletFrame, 'b', obsidian, 'c', cEssRefined);
 		
 		GameRegistry.addRecipe(ringFrame, " a ", "a a", " a ", 'a', ironBar);
-		GameRegistry.addRecipe(rRingFrame, " c ", "bab", " b ", 'a', ringFrame, 'b', obsidian, 'c', pearl); // TODO refined cess fix
+		GameRegistry.addRecipe(rRingFrame, " c ", "bab", " c ", 'a', ringFrame, 'b', obsidian, 'c', cEssRefined);
 		
 		GameRegistry.addRecipe(beltFrame, "aaa", "a a", "aaa", 'a', ironBar);
-		GameRegistry.addRecipe(rBeltFrame, "bcb", "bab", " b ", 'a', beltFrame, 'b', obsidian, 'c', pearl);
+		GameRegistry.addRecipe(rBeltFrame, "bcb", "bab", "bcb", 'a', beltFrame, 'b', obsidian, 'c', cEssRefined);
 		
-		GameRegistry.addRecipe(stepBelt, "aaa", "bcb", "aaa", 'a', iron, 'b', obsidian, 'c', rBeltFrame);
+		GameRegistry.addRecipe(stepBelt, "aaa", "bcb", "aaa", 'a', iron, 'b', cEssRefined, 'c', rBeltFrame);
 		
 		GameRegistry.addRecipe(cEssBlock, "aaa", "aaa", "aaa", 'a', cEss);
+		GameRegistry.addRecipe(cEssBlockRefined, "aaa", "aaa", "aaa", 'a', cEssRefined);
 		
 		GameRegistry.addRecipe(cEssCoarse, "aba", "bcb", "aba", 'a', obsidian, 'b', cEss, 'c', pearl);
+		GameRegistry.addRecipe(cEssCoarse, "aba", "bcb", "aba", 'a', cEss, 'b', obsidian, 'c', pearl);
 		
 		// Shapeless
 		GameRegistry.addShapelessRecipe(new ItemStack(TradeoffsItems.cEss, 9), new Object[] {cEssBlock});
+		GameRegistry.addShapelessRecipe(new ItemStack(TradeoffsItems.cEssRefined, 9), new Object[] {cEssBlockRefined});
 		
 		// Furnace
-		GameRegistry.addSmelting(cEssRefined, cEssCoarse, 0.2F);
+		GameRegistry.addSmelting(cEssCoarse, cEssRefined, 0.2F);
 	}
 	
 }

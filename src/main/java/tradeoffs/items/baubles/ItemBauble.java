@@ -12,7 +12,8 @@ import net.minecraft.world.World;
 
 public class ItemBauble extends Item implements IBauble {
 
-	public int baubleLevel;
+	protected int baubleLevel;
+	public int ticks = 162000;
 	
 	public ItemBauble(String name, int baubleLevel) {
 		super();
@@ -45,14 +46,14 @@ public class ItemBauble extends Item implements IBauble {
 	}
 	
 	public void onCreated(ItemStack stack, World world, EntityPlayer player) {
-		/*NBTTagCompound tag = stack.stackTagCompound;
+		NBTTagCompound tag = stack.stackTagCompound;
 		
 		tag = new NBTTagCompound();
 		
-		tag.setInteger("ticksRemaining", 0);
+		tag.setInteger("ticksRemaining", ticks);
 		tag.setInteger("baubleLevel", this.baubleLevel);
-
-		stack.stackTagCompound = tag;*/
+		
+		stack.stackTagCompound = tag;
 	}
 
 	public void onEquipped(ItemStack stack, EntityLivingBase player) {

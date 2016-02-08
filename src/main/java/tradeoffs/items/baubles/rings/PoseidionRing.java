@@ -1,32 +1,29 @@
-package tradeoffs.items.baubles.belts;
+package tradeoffs.items.baubles.rings;
 
 import java.util.List;
 
-import net.minecraft.block.material.Material;
+import tradeoffs.items.TradeoffsItems;
+import baubles.api.BaublesApi;
+import baubles.common.container.InventoryBaubles;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
-import tradeoffs.items.TradeoffsItems;
-import tradeoffs.utility.TradeoffsTabs;
-import baubles.api.BaubleType;
-import baubles.api.BaublesApi;
-import baubles.common.container.InventoryBaubles;
 
-// dont touch this shit
-public class BeltOfStability extends TBelt {
-	
-	public BeltOfStability(String name, int baubleLevel) {
+public class PoseidionRing extends TRing {
+
+	public PoseidionRing(String name, int baubleLevel) {
 		super(name, baubleLevel);
 		
 		this.baubleLevel = baubleLevel;
 		MinecraftForge.EVENT_BUS.register(this);
 	}
-	
+		
 	@Override
 	public void onWornTick(ItemStack stack, EntityLivingBase entity) {
 		NBTTagCompound tag = stack.stackTagCompound;
@@ -52,19 +49,16 @@ public class BeltOfStability extends TBelt {
 				if(ticks <= 0) {
 					InventoryBaubles inv = (InventoryBaubles) BaublesApi.getBaubles(player);
 					
-					inv.setInventorySlotContents(3, new ItemStack(TradeoffsItems.beltOfStability1, 1));
+					inv.setInventorySlotContents(3, new ItemStack(TradeoffsItems.vulcanianRing1, 1));
 				}
 			}
 			
-			if(player.isSprinting()  && this.baubleLevel == 0) { // Early-Game, no sprinting w/ step assist
-				player.setSprinting(false);
+			if(player.dimension == -1 && this.baubleLevel == 0) {
+				player.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 101, 4));
+				player.addPotionEffect(new PotionEffect(Potion.weakness.id, 101, 4));
 			}
 			
-			if (player.isSneaking()) {
-				player.stepHeight = 0.50001F;
-			} else if (player.stepHeight == 0.50001F) {
-				player.stepHeight = 1F;
-			}
+			player.addPotionEffect(new PotionEffect(Potion.waterBreathing.id, 3, 4));
 		}
 	}
 	
@@ -80,22 +74,22 @@ public class BeltOfStability extends TBelt {
 			stack.stackTagCompound = tag;
 		}
 		
-		list.add(EnumChatFormatting.GREEN + "Auto-Step");
+		list.add(EnumChatFormatting.GREEN + "Drowning Immunity");
 		
 		if(this.baubleLevel == 0) {
-			list.add(EnumChatFormatting.RED + "Heavy");
+			list.add(EnumChatFormatting.RED + "Heat Hostility");
 		}else if(this.baubleLevel == 1) {
 			list.add(EnumChatFormatting.GRAY + timeRemaining(tag, ticks));
 		}
 	}
 	
 	public void onEquippedOrLoadedIntoWorld(ItemStack stack, EntityLivingBase player) {
-		player.stepHeight = 1F;
+		player.addPotionEffect(new PotionEffect(Potion.waterBreathing.id, 3, 4)); // Make the effect last 3 ticks just to be sure
 	}
 
 	@Override
 	public void onUnequipped(ItemStack stack, EntityLivingBase player) {
-		player.stepHeight = 0.5F;
+		player.removePotionEffect(Potion.waterBreathing.id);
 	}
 
 }

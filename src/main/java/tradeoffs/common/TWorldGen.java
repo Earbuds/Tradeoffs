@@ -16,9 +16,11 @@ public class TWorldGen implements IWorldGenerator {
 		switch(world.provider.dimensionId) {
 		case -1:
 			generateNether(world, random, chunkX * 16, chunkZ * 16);
-			case 0:
+			
+		case 0:
 			generateOverworld(world, random, chunkX * 16, chunkZ * 16);
-			case 1:
+			
+		case 1:
 			generateEnd(world, random, chunkX * 16, chunkZ * 16);
 			
 			default:

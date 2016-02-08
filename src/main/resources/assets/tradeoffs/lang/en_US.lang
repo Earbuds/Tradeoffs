@@ -1,6 +1,7 @@
 tile.cEssOre.name=Contingent Essence Ore
 
 tile.cEssBlock.name=Contingent Essence Block
+tile.cEssBlockRefined.name=Refined Contingent Essence Block
 
 item.cEss.name=Contingent Essence
 item.cEssCoarse.name=Coarse Contingent Essence
@@ -17,6 +18,14 @@ item.cingFrame.name=Contingent Ring Frame
 item.beltFrame.name=Belt Frame
 item.rBeltFrame.name=Reinforced Belt Frame
 item.cBeltFrame.name=Contingent Belt Frame
+
+item.poseidionRing1.name=Poseidion Ring v1
+item.poseidionRing2.name=Poseidion Ring v2
+item.poseidionRing3.name=Poseidion Ring v3
+
+item.vulcanianRing1.name=Vulcanian Ring v1
+item.vulcanianRing2.name=Vulcanian Ring v2
+item.vulcanianRing3.name=Vulcanian Ring v3
 
 item.beltOfStability1.name=Belt of Stability v1
 item.beltOfStability2.name=Belt of Stability v2
