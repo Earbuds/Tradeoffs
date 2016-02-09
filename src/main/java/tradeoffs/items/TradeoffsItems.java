@@ -1,5 +1,6 @@
 package tradeoffs.items;
 
+import tradeoffs.items.baubles.amulets.AmuletOfEnhancedVision;
 import tradeoffs.items.baubles.amulets.TAmulet;
 import tradeoffs.items.baubles.belts.BeltOfStability;
 import tradeoffs.items.baubles.belts.TBelt;
@@ -26,6 +27,10 @@ public class TradeoffsItems {
 	public static Item beltFrame;
 	public static Item rBeltFrame;
 	public static Item cBeltFrame;
+	
+	public static Item amuletOfEnhancedVision1;
+	public static Item amuletOfEnhancedVision2;
+	public static Item amuletOfEnhancedVision3;
 	
 	public static Item poseidionRing1;
 	public static Item poseidionRing2;
@@ -57,6 +62,10 @@ public class TradeoffsItems {
 		rBeltFrame = new TBelt("rBeltFrame", 1);
 		cBeltFrame = new TBelt("cBeltFrame", 2);
 		
+		amuletOfEnhancedVision1 = new AmuletOfEnhancedVision("amuletOfEnhancedVision1", 0);
+		amuletOfEnhancedVision2 = new AmuletOfEnhancedVision("amuletOfEnhancedVision2", 1);
+		amuletOfEnhancedVision3 = new AmuletOfEnhancedVision("amuletOfEnhancedVision3", 2);
+		
 		poseidionRing1 = new PoseidionRing("poseidionRing1", 0);
 		poseidionRing2 = new PoseidionRing("poseidionRing2", 1);
 		poseidionRing3 = new PoseidionRing("poseidionRing3", 2);
@@ -70,7 +79,7 @@ public class TradeoffsItems {
 		beltOfStability3 = new BeltOfStability("beltOfStability3", 2);
 		
 		Item[] TItems = {cEss, cEssCoarse, cEssRefined};
-		Item[] amulets = {amuletFrame, rAmuletFrame, cAmuletFrame};
+		Item[] amulets = {amuletFrame, rAmuletFrame, cAmuletFrame, amuletOfEnhancedVision1, amuletOfEnhancedVision2, amuletOfEnhancedVision3};
 		Item[] rings = {ringFrame, rRingFrame, cRingFrame, poseidionRing1, poseidionRing2, poseidionRing3, vulcanianRing1, vulcanianRing2, vulcanianRing3};
 		Item[] belts = {beltFrame, rBeltFrame, cBeltFrame, beltOfStability1, beltOfStability2, beltOfStability3};
 		

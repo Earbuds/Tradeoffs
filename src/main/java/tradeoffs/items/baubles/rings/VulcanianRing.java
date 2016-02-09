@@ -86,7 +86,7 @@ public class VulcanianRing extends TRing {
 	}
 	
 	public void onEquippedOrLoadedIntoWorld(ItemStack stack, EntityLivingBase player) {
-		player.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 3, 4)); // Make the effect last 3 ticks just to be sure
+		player.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 3, 4));
 	}
 
 	@Override

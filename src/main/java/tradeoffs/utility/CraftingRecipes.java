@@ -34,6 +34,9 @@ public class CraftingRecipes {
 		ItemStack rBeltFrame = new ItemStack(TradeoffsItems.rBeltFrame);
 		ItemStack cBeltFrame = new ItemStack(TradeoffsItems.cBeltFrame);
 		
+		ItemStack waterRing = new ItemStack(TradeoffsItems.poseidionRing1);
+		ItemStack lavaRing = new ItemStack(TradeoffsItems.vulcanianRing1);
+		
 		ItemStack stepBelt = new ItemStack(TradeoffsItems.beltOfStability1);
 		
 		ItemStack cEssBlock = new ItemStack(TradeoffsBlocks.cEssBlock);
@@ -48,6 +51,9 @@ public class CraftingRecipes {
 		
 		GameRegistry.addRecipe(beltFrame, "aaa", "a a", "aaa", 'a', ironBar);
 		GameRegistry.addRecipe(rBeltFrame, "bcb", "bab", "bcb", 'a', beltFrame, 'b', obsidian, 'c', cEssRefined);
+		
+		GameRegistry.addRecipe(waterRing, " a ", "aba", "ccc", 'a', new ItemStack(Items.water_bucket), 'b', ringFrame, 'c', cEss);
+		GameRegistry.addRecipe(lavaRing, " a ", "aba", "ccc", 'a', new ItemStack(Items.lava_bucket), 'b', ringFrame, 'c', cEss);
 		
 		GameRegistry.addRecipe(stepBelt, "aaa", "bcb", "aaa", 'a', iron, 'b', cEssRefined, 'c', rBeltFrame);
 		

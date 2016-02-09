@@ -19,6 +19,10 @@ item.beltFrame.name=Belt Frame
 item.rBeltFrame.name=Reinforced Belt Frame
 item.cBeltFrame.name=Contingent Belt Frame
 
+item.amuletOfEnhancedVision1.name=Amulet of Enhanced Vision v1
+item.amuletOfEnhancedVision2.name=Amulet of Enhanced Vision v2
+item.amuletOfEnhancedVision3.name=Amulet of Enhanced Vision v3
+
 item.poseidionRing1.name=Poseidion Ring v1
 item.poseidionRing2.name=Poseidion Ring v2
 item.poseidionRing3.name=Poseidion Ring v3

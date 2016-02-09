@@ -1,25 +1,22 @@
-package tradeoffs.items.baubles.belts;
+package tradeoffs.items.baubles.amulets;
 
 import java.util.List;
 
-import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.EnumChatFormatting;
-import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import tradeoffs.items.TradeoffsItems;
-import tradeoffs.utility.TradeoffsTabs;
-import baubles.api.BaubleType;
 import baubles.api.BaublesApi;
 import baubles.common.container.InventoryBaubles;
 
-public class BeltOfStability extends TBelt {
-	
-	public BeltOfStability(String name, int baubleLevel) {
+public class AmuletOfEnhancedVision extends TAmulet {
+
+	public AmuletOfEnhancedVision(String name, int baubleLevel) {
 		super(name, baubleLevel);
 		
 		this.baubleLevel = baubleLevel;
@@ -55,15 +52,11 @@ public class BeltOfStability extends TBelt {
 				}
 			}
 			
-			if(player.isSprinting()  && this.baubleLevel == 0) { // Early-Game, no sprinting w/ step assist
-				player.setSprinting(false);
+			if(this.baubleLevel == 0) {
+				
 			}
 			
-			if (player.isSneaking()) {
-				player.stepHeight = 0.50001F;
-			} else if (player.stepHeight == 0.50001F) {
-				player.stepHeight = 1F;
-			}
+			player.addPotionEffect(new PotionEffect(Potion.nightVision.id, 400, 4));
 		}
 	}
 	
@@ -79,7 +72,7 @@ public class BeltOfStability extends TBelt {
 			stack.stackTagCompound = tag;
 		}
 		
-		list.add(EnumChatFormatting.GREEN + "Auto-Step");
+		list.add(EnumChatFormatting.GREEN + "Enhanced Vision");
 		
 		if(this.baubleLevel == 0) {
 			list.add(EnumChatFormatting.RED + "Heavy");
@@ -88,13 +81,13 @@ public class BeltOfStability extends TBelt {
 		}
 	}
 	
-	public void onEquippedOrLoadedIntoWorld(ItemStack stack, EntityLivingBase player) {
-		player.stepHeight = 1F;
+	public void onEquippedOrLoadedIntoWorld(ItemStack stack, EntityLivingBase player) { // Sky flickers when 10s or less are left in effect
+		player.addPotionEffect(new PotionEffect(Potion.nightVision.id, 400, 4));
 	}
 
 	@Override
 	public void onUnequipped(ItemStack stack, EntityLivingBase player) {
-		player.stepHeight = 0.5F;
+		player.removePotionEffect(Potion.nightVision.id);
 	}
-
+	
 }
